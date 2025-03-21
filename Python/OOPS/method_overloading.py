@@ -1,7 +1,8 @@
 """
-Method Overloading Using Three Methods
+Method Overloading Using Three Methods:
 ---------------------------------------
-Demonstrates the use of three distinct methods to simulate overloading.
+THE PROCESS OF DEVELOPING MULTIPLE METHODS WITH SAME NAME BUT DIFFERENT
+ARGUMENTS LIST IS CALLED AS METHOD OVERLOADING.
 """
 
 class Calculator:
