@@ -17,16 +17,19 @@ Changes affect: Only that specific object, not others.
 
 """
 
-class Student:
-    school = "ABC School"  # Static Variable
+class Dog:
+    species = "Canine"  # Class attribute or static varable
 
-    def __init__(self, name):
-        self.name = name  # Non-Static Variable
+    def __init__(self, name, age):
+        self.name = name  # Instance attribute or non static varable
+        self.age = age  # Instance attribute
 
-s1 = Student("Alice")
-s2 = Student("Bob")
+dog1 = Dog("Buddy", 3)  # Create an instance of Dog
+dog2 = Dog("Charlie", 5)  # Create another instance of Dog
 
-print(s1.name, s1.school)  # Alice ABC School
-print(s2.name, s2.school)  # Bob ABC School
+print(dog1.name, dog1.age, dog1.species)  # Access instance and class attributes
+print(dog2.name, dog2.age, dog2.species)  # Access instance and class attributes
+print(Dog.species)  # Access class attribute directly
+
 
 
