@@ -1,3 +1,10 @@
+"""
+The requests library is one of an integral part of Python for making HTTP requests to a specified URL. 
+Whether it be REST APIs or Web Scraping, requests are must be learned for proceeding further with these technologies.
+
+"""
+
+
 import requests
 
 base_url = "https://reqres.in/"
