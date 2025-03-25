@@ -9,7 +9,6 @@ b = b.lower()  # Convert string 'b' to lowercase
 print(len(a) == len(b))  # Check if lengths are equal
 print(sorted(a) == sorted(b))  # Check if sorted characters are equal
 
-
 # Custom anagram check using a loop
 is_anagram = True  # Initialize the flag for checking
 

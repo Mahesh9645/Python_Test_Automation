@@ -1,4 +1,19 @@
 """
+Polymorphism:
+-------------
+==> One thing showing multiple behaviour is called as polymorphism.
+
+1. Compile time polymorphism :
+-----------------------------
+During compile time one thing showing multiple behaviour is called as compile time polymorphism.
+ex: method overloading, where during compilation, compiler will decide
+which behaviour to be implemented so here methodname is same but depending
+on type of args it shows different behaviour.
+run()
+run(int i)
+run(char ch)
+run(String s,int i)
+
 Method Overloading Using Three Methods:
 ---------------------------------------
 THE PROCESS OF DEVELOPING MULTIPLE METHODS WITH SAME NAME BUT DIFFERENT
