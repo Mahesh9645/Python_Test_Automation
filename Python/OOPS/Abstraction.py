@@ -1,8 +1,10 @@
 """
 Abstraction Example
 -------------------
-Abstraction is an Object-Oriented Programming (OOP) concept that focuses on 
-hiding the internal implementation and showing neccssary data to end users.
+The process of hiding the internal implementation and showing the
+necessary data to the end user is called as Abstraction.
+
+
 
 """
 
