@@ -1,3 +1,15 @@
+"""
+findElement() is used to get the address of first matching element on the webpage
+==>Returntype is WebElement interface
+==>If element unable to find we get "NoSuchElementException"
+
+findElements() is used to get the address of all the matching elements on the webpage
+==>Returntype is List<WebElement> interface
+==>If element unable to find we get "emptyList"
+
+
+"""
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
