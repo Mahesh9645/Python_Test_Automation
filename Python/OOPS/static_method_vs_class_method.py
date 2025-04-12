@@ -26,4 +26,4 @@ class MyClass:
         print(f"Class variable is now {cls.class_variable}")
 
 MyClass.static_method()   # Output: This is a static method.
-MyClass.class_method()    # Output: Class variable is now 1
+MyClass.class_method()    # Output: Class variable is  now 1
