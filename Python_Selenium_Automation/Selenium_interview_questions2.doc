@@ -1,4 +1,5 @@
 Selenium testing:
+===> open -source tool and widely used for web applications
 
 1. selenium env setup
 2. System.setProperty("webdriver.chrome.driver","location of chrome driver")
@@ -15,7 +16,7 @@ WebDriver driver=new ChromeDriver();
 
 4. locators-id, name, class name, tagname, link text, partial link text, xpath, css selector
 
-5. methods-get, navigate, gettitle,getcurrent url, getpagesource, find element, findelements,
+5. abstract methods-get, navigate, gettitle,getcurrent url, getpagesource, find element, findelements,
    switchto(), close, quit, manage(),getWindowHandle,getWindowHandles
 
    difference b/w get and navigate
@@ -23,10 +24,6 @@ WebDriver driver=new ChromeDriver();
 
    navigate- navigate to url and able to perform navigate back, forward and refresh
    --Does not wait for full page load
-java
-Copy
-Edit
-
 
   driver.navigate().to(url);
   driver.navigate.forward();
@@ -34,8 +31,8 @@ Edit
   driver.navigate.refresh();
 
 6. difference between find elements and find element
-   find element-used to find single element from webbrowser
-   find elements -used to find no of elements at a time from web browser
+   find element-used to find single element from webbrowser==>web element==>nosuch element exception
+   find elements -used to find no of elements at a time from web browser==>list<web elements>==>timeout exception
 
 7. switchto - used to switch from page to page or page to window or window to page
    driver.switchto.window.maximize();
@@ -48,20 +45,33 @@ Edit
 
 9. operations for web elements-click, sendkeys, clear, gettext, gettagname, getlocation()x,y, isselected, isdisplayed,
 isenabled, get attribute
+isdisplayed -used to check whether the element is displayed or not
+isenabled -used to check whether the element is enabled or not 
+isselected -used to check whether the element is selected or not
+getlocation -used to get the location of the element in x and y coordinates   
+gettagname -used to get the tag name of the element
+getattribute -used to get the attribute of the element
+gettext -used to get the text of the element
+
 
 10. links, dropdowns-select by value, select by index, select by visible text, checkbox,
    radiobutton, text field, img, screenshot
 
+
+
 11. synchronization-implicit wait, explicit wait, fluent wait(waits in selenium)
    synchronization - to match the application speed and running script speed
+    ==>Matching the speed of Selenium with the speed of application, to avoid synchronisation issue is called Synchronization
 
    Implicit wait -waits for an element to appear on the page,
       driver.manage.timeouts.implicitlywait(duration.ofseconds(2000)) 
       driver.manage.timeouts what is manage--manage is method
+      ==>NoSuchElementException/EmptyList
 
    explicit wait -waits for a specific condition, such as the presence of an element or the element to be clickable. 
       WebDriverWait wait = new WebDriverWait(driver,30);
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'COMPOSE')]")));
+      ==>TimeoutException
 
    Scope: Implicit wait applies globally, while explicit wait applies locally to a specific element
 
@@ -72,12 +82,15 @@ isenabled, get attribute
 	.ignoring(Exception.class)
 
 fluent waits- fluent wait- polling wait every 5 secs(max time 30 sec)
+
+throw ==> exception  ==>using try,catch blockers
+throws  ==> exception ==> using throws keyword in method signature==> handling multiple exceptions
+throws IOException, SQLException, ClassNotFoundException
    
 12. advanced user interactions - click, doubleclick, contextclick(rightclick), movetoelement, draganddropby(slider), draganddrop, sendkeys
     how to scroll elements using xlocation and y location(draganddropby method in selenium)
 
-13. selenium components-ide, rc, webdriver, grid
-
+13. selenium components(flaours,versions)-ide, rc, webdriver, grid
 
    ide -you can simply record your interactions with browser to create test cases
    rc -It is a testing framework that enables a QA or a developer to write test cases in 
@@ -91,10 +104,20 @@ Selenium IDE- It then generates the test script (of the automated tests) in prog
 Selenium WebDriver- The WebDriver proves to be better than Selenium IDE and Selenium RC in many aspects. It implements a more modern and stable approach in automating the browser's
 
 14. what is selenium 
+
 15. what is frame work in selenium
+- A framework is a set of guidelines or rules used to create and design test cases. 
+   It provides a structure for organizing test scripts, data, and other resources, making it easier to manage and maintain the test automation process.
+   Types of frameworks: Data-driven framework, Keyword-driven framework, Hybrid framework, Page Object Model (POM), Behavior Driven Development (BDD) framework
+
 16. can selenium be automate windows or desktop applications
+- No, Selenium cannot automate Windows or desktop applications. It is specifically designed for web applications and browser automation.
+   For automating Windows applications, you would typically use tools like AutoIt, Sikuli, or WinAppDriver.
+
 
 17. alerts-popup in guru 99
+   alert- is a small message box that displays information to the user.
+
   simple alert-display information, 
   prompt alert-user need to provide infomraion
   confirmation alert-question confirmation alert
@@ -106,6 +129,12 @@ Selenium WebDriver- The WebDriver proves to be better than Selenium IDE and Sele
 
 18. window handling, open multiple windows how can you switch, method in windows handling
 switch between windows(swtich to 2nd and 3rd-get uniq id of 3rd window switch by using uniq id)
+
+driver.getWindowHandles() - returns the set of window handles of all open windows in the current session.
+returns a Set<String> of window handles.
+
+driver.getWindowHandle() - returns the window handle of the current window
+returns a String of alphanumeric characters.
 
 WebDriverManager.chromedriver().setup();
 WebDriver driver=new ChromeDriver();
@@ -150,7 +179,7 @@ relative xpath types:
 //tagname[contains(text(), 'textvalue')]
 //tagname[starts-with(an='av')]
 //tagname[@an='av' or @an='av']
-XPath=//*[contains(@id,'Name')
+XPath=//*[contains(@id,'Name')]
 
 axes methods in xpaths
 
@@ -218,18 +247,27 @@ STCM- @beforeSuite, @beforetest, @beforeclass, @beforemethod, @test,
 2. we have 50 test cases executed using testng 20 passed 30 failed, how can we execute remaining 30 test cases
 once execution done, In test ng framework - go to the testoutput folder->open testngfailed.xml file then run it(after fixed the issues got confirmation from developer)
 
-3. Assertions in selenium java (assert.equals(actual, expected), assert.notequals, assert.true(condition), assrt.false, assert.null, assert.notnull
+3. Assertions in selenium java (assert.equals(actual, expected), assert.notequals, assert.true(condition), assrt.false, assert.null, assert.notnull)
 
 what assertions used in your project- hard assertions we have used
 
 Hard Asserts vs Soft Asserts
-Hard Assertions                                                 	Soft Assertions
-Test Execution will be aborted if the assert condition is not met	Test execution will continue till the end of the test case even if the assert condition is not met
+Hard Assertions                                                 	  Soft Assertions
+Test Execution will be aborted if the assert condition is not met	  Test execution will continue till the end of the test case even if the assert condition is not met
 Does not have to invoke any methods to capture the assertions	        To view assertions result at the end of the test, the tester has to invoke assertAll()
 
 4. testng annotations
 In test ng, we have 10 test cases- how can we run 5th test case 10 times
 
+==>parameters
+->Group==>grouping
+->Priority=>
+->enabled or disbled
+->dependency
+->invocation count
+->depends on method
+->data provider
+->testng.xml file
 
 ====================================================
 
@@ -366,4 +404,3 @@ and fluent wait provides more flexibility in defining wait conditions with addit
 Each type of wait has its use cases depending on the scenario you are dealing with in your test automation.
 
 ==============================================================================
-

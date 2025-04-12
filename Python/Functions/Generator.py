@@ -1,5 +1,5 @@
 """
-A generator is a special type of function in Python that allows you to 
+A generator is a special type of iterative  function in Python that allows you to 
 produce a sequence of values lazily (one value at a time) using the yield statement.
 """
 
