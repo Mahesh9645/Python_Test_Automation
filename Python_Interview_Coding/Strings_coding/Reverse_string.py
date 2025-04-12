@@ -62,3 +62,13 @@ print(non_duplicate)
 
 # Output: RSTUV
 ################################################
+input_str = "Test in Progress"
+
+a = input_str.split()
+rev = []
+for i in range(len(a)-1, -1, -1):
+    rev.append(a[i][::-1])  # reverse each word and store in a list
+
+print(' '.join(rev))
+
+# Output: ssergorP ni tseT

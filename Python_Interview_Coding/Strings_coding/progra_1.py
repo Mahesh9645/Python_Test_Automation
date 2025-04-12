@@ -12,6 +12,24 @@ for i in range(0, len(a), 2):  # Step by 2 to access the letter and the number
 
 print(output)
 
+##################################################################################################
+a = "AABBBCCCCaaaaa"
+# output: A2B4C4a5
+output = ""
+count = 1
+
+for i in range(1,len(a)):
+    if a[i] == a[i - 1]:
+        count += 1
+    else:
+        output += a[i - 1] + str(count)
+        count = 1
+
+# Add the last group
+output += a[-1] + str(count)
+
+print(output)
+
 
 ####################################################################
 

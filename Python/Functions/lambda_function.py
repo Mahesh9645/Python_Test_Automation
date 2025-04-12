@@ -5,6 +5,10 @@ Lambda Function?
 A lambda function is a small, anonymous function defined using the lambda keyword. 
 It can have multiple arguments but only one expression.
 
+->anonymous function
+->using lambda keyword
+->it takes no.of arguments
+->its writes in single line
 """
 
 # Lambda function for addition
