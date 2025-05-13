@@ -1,5 +1,16 @@
 # rectangle.py
+"""
+class :
+==>A class is a blue print or template using which we can develop code of APP.
+==>When class is created, memory will not be allocated.
 
+object:
+
+==>An object is physical entity.Object represents state and behaviour.
+==>An Object is an Entity which gets created using class and it represents
+==>the state and behaviours. When object gets created memory will be allocated(Heap).
+
+"""
 class Rectangle:
     def __init__(self, height, width):
         """

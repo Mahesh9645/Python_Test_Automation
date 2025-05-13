@@ -1,9 +1,11 @@
+"""
 # A dictionary in Python is a mutable, dynamic, and unordered collection of key-value pairs.
 # Each key must be unique, and it maps to a corresponding value.
 # Dictionaries are optimized for quick lookups, updates, and deletions.
 # They are created using curly braces {} or the dict() constructor.
 # Indexing and slicing are not possible in dictionaries.
 
+"""
 # creating empty dictionary
 d1 = {}
 d2 = dict()
@@ -33,7 +35,8 @@ print("Values:", my_dict.values())  # Output: Values: dict_values(['John', 30])
 print("Items:", my_dict.items())  # Output: Items: dict_items([('name', 'John'), ('age', 30)])
 
 # 7. Updating dictionary with update()
-my_dict.update({"age": 35, "location": "New York"})
+new_values={"age": 35, "location": "New York"}
+my_dict.update(new_values)
 print("Updated Dictionary:", my_dict)  # Output: Updated Dictionary: {'name': 'John', 'age': 35, 'location': 'New York'}
 
 # 8. Removing a key-value pair using pop()
@@ -77,3 +80,4 @@ a = {"name": "Alice", "age": 25, "marks": 90}
 del a["age"]
 
 print(a)  # Output: {'name': 'Alice', 'marks': 90}
+

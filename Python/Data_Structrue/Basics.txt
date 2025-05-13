@@ -1,6 +1,6 @@
 ### **List, Tuple, Set, and Dictionary in Python (With Functions)**  
 
-#### ** List (Ordered, Mutable, Allows Duplicates)**  
+#### ** List (Ordered, Mutable, Allows Duplicates,hetrogeneous)**  
 A **list** is a collection of elements that maintain order and can be modified.  
 
 **Common Methods:**  
@@ -18,7 +18,7 @@ A **list** is a collection of elements that maintain order and can be modified.
 #######################################################################################################
 
 #### **2⃣ Tuple (Ordered, Immutable, Allows Duplicates)**  
-A **tuple** is a collection similar to a list, but it cannot be modified after creation.  
+A **tuple** is a collection similar to a list, but it cannot be modified after creation.and maintains order.  
 
 **Common Methods:**  
 - `count(item)` → Returns the number of times an item appears.  
@@ -44,7 +44,7 @@ A **set** is a collection that stores unique elements in an unordered manner.
 #############################################################################################################
 
 #### **4⃣ Dictionary (Key-Value Pairs, Mutable, No Duplicate Keys)**  
-A **dictionary** stores elements in key-value pairs.  
+A **dictionary** stores elements in key-value pairs. It is mutable and does not allow duplicate keys. maintains order.
 
 **Common Methods:**  
 - `keys()` → Returns all keys.  

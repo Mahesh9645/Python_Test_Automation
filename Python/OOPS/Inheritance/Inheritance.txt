@@ -30,7 +30,12 @@ Types of Inheritance:
 
 ==>Hierarchical Inheritance: One super class and Two sub classes.
 
-==>Multiple Inheritance: Multiple inheritance is One class is inheriting two immediate super classes at the same time
+==>Multiple Inheritance: Multiple inheritance is One class is inheriting two immediate super classes at the same time.
+
+==>Hybrid Inheritance is a combination of multiple inheritance and multilevel inheritance.
+It is a combination of Multiple and Hierarchical Inheritance since
+Multiple is not possible through classes. Hybrid is also not possible
+through classes.
 ============================================================================================================================
 Why do we go for Overriding ??
 ==>When subclass want the properties of super class but does not want the

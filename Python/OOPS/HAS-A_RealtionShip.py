@@ -33,5 +33,4 @@ my_car = Car(car_model, "Red")
 # Displaying car details
 print(my_car.get_car_info())
 
-
 # Output: Model: Toyota Corolla, Year: 2023, Color: Red

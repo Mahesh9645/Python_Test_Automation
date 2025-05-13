@@ -26,6 +26,10 @@ def say_hello():
 say_hello()
 
 
-# In this example, the  my_decorator  function modifies the behavior of  say_hello  by printing additional messages before and after calling it. I used the  @my_decorator  syntax to apply the decorator, which is a clean and readable way to enhance the function.
+# In this example, the  my_decorator  function modifies the behavior of  say_hello  
+# by printing additional messages before and after calling it. 
+# I used the  @my_decorator  syntax to apply the decorator, which is a clean and readable way to enhance the function.
 
-# Decorators can also accept arguments. When I need to pass arguments to a decorator, I add an extra layer of nesting. This flexibility makes decorators one of the most versatile features in Python, allowing me to write cleaner, more maintainable code.
+# Decorators can also accept arguments. When I need to pass arguments to a decorator, I
+#  add an extra layer of nesting. This flexibility makes decorators one of the most versatile features in Python,
+#  allowing me to write cleaner, more maintainable code.

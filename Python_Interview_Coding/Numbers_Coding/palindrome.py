@@ -1,5 +1,5 @@
 # Input number to check for palindrome
-a = 121
+a = 123
 n = a  # Store the original number for comparison
 rev = 0  # Initialize the reverse variable
 

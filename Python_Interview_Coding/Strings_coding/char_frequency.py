@@ -12,7 +12,7 @@ print(char_count("Automation"))
 word = "Automation"
 freq = {}
 
-for char in freq:
+for char in word:
     if char in freq:
         freq[char] +=1
 

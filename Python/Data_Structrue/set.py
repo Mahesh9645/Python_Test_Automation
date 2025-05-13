@@ -13,6 +13,7 @@ set2 = {3, 4, 5, 6}
 set1.add(10)
 print("add():", set1)  # {1, 2, 3, 4, 10}
 
+
 # 2. remove() - Removes an element (raises error if not found)
 set1.remove(2)
 print("remove():", set1)  # {1, 3, 4, 10}
@@ -44,6 +45,9 @@ print("intersection():", intersect_set)  # {3, 4}
 # 8. difference() - Elements in set1 but not in set2
 diff_set = set1.difference(set2)
 print("difference():", diff_set)  # {1, 2}
+
+diff_set0 = set2.difference(set1)
+print("diff_2():" , diff_set0)
 
 # 9. symmetric_difference() - Elements in either set1 or set2, but not both
 sym_diff_set = set1.symmetric_difference(set2)
