@@ -1,0 +1,38 @@
+name: Append Commit Messages with Author Details
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'commit-log.txt'
+
+jobs:
+  append_commit_details:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Allows the workflow to push changes
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for accurate commit logs
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Append Commit Details to commit-log.txt
+        run: |
+          echo "### Commits on $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> commit-log.txt
+          git log --format="- %s | Author: %an | Email: %ae" ${{ github.event.before }}..${{ github.sha }} >> commit-log.txt
+          echo "" >> commit-log.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git add commit-log.txt
+          git commit -m "chore: update commit-log.txt with latest commit details"
+          git push
